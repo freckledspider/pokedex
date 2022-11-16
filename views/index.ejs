@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <% for(let i = 0; i < 6; i++) { %>
+        <h2><%=allPokemon[i].name %></h2><br>
+        <a href="/pokemon/<%= i %>"><img src="<%=allPokemon[i].img %>"></a><br>
+        <%=allPokemon[i].type %><br>
+        HP: <%=allPokemon[i].stats.hp %><br>
+        ATK: <%=allPokemon[i].stats.attack %><br>
+        DEF: <%=allPokemon[i].stats.defense %><br><br>
+    <% } %>
 
-<%=allPokemon[0].name %><br>
-<img src="<%=allPokemon[0].img %>"><br>
-<%=allPokemon[0].type %><br>
-HP: <%=allPokemon[0].stats.hp %><br>
-ATK: <%=allPokemon[0].stats.attack %><br>
-DEF: <%=allPokemon[0].stats.defense %><br>
 
 </body>
 </html>
