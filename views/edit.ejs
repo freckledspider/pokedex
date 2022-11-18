@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Change <%=pokemon.name; %>'s Nickname</h1>
+    <% pokemon.img; %>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+        Nickname: <input type="text" name="name" value="<%= pokemon.name %>"> <br>
+        
+        <!-- Hidden values so they don't disappear with the update -->
+        <input class="hide" type="text" name="img" value="<%= pokemon.img %>">
+        <input class="hide" type="text" name="type" value="<%= pokemon.type %>">
+        <input class="hide" type="text" name="stats[hp]" value="<%=pokemon.stats.hp %>">
+        <input class="hide" type="text" name="stats[attack]" value="<%=pokemon.stats.attack %>">
+        <input class="hide" type="text" name="stats[defense]" value="<%=pokemon.stats.defense %>">
+        <!-- ----------------------------------------------------- -->
+
+        <input type="submit" value="Change Name">
+    </form>
+</body>
+</html>

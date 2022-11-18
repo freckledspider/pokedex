@@ -49,10 +49,10 @@ app.get('/pokemon/', (req, res) => {
 // Show Route
 // -----------------------------------------------
 
-app.get('/pokemon/:id', (req, res) => {
+app.get('/pokemon/:index', (req, res) => {
     res.render('show.ejs', {
-        pokemon: pokemons[req.params.id],
-        i: req.params.id
+        pokemon: pokemons[req.params.index],
+        index: req.params.index
     });
 });
 
@@ -73,7 +73,7 @@ app.get("/pokemon/new", (req, res) => {
 app.get("/pokemon/:id/edit", (req, res) => {
     res.render("edit.ejs", {
         pokemon: pokemons[req.params.id],
-        index: req.params.id
+        index: req.params.id,
     })
 })
 
@@ -103,9 +103,7 @@ app.put("/pokemon/:id", (req, res) => {
 // -----------------------------------------------
 
 app.delete("/pokemon/:id", (req, res) => {
-    // splice the item out of the array
     pokemon.splice(req.params.id, 1)
-    // redirect user back to index
     res.redirect("/pokemon")
 })
 
