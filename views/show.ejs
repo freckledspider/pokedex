@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="show">
     <h1><%=pokemon.name; %></h1>
-    <img src="<%=pokemon.img %>"><br>
+    <img class="pokemonshow" src="<%=pokemon.img %>"><br>
     Type: <%=pokemon.type %><br>
     HP: <%=pokemon.stats.hp %><br>
     ATK: <%=pokemon.stats.attack %><br>
-    DEF: <%=pokemon.stats.defense %><br>
-    <a href="/pokemon/<%= index %>/edit"><button>Change Nickname</button></a>
-    <a href="/pokemon"><button>Back</button></a>
+    DEF: <%=pokemon.stats.defense %><br><br>
+    <a href="/pokemon/<%= index %>/edit"><button class="new">Change Nickname</button></a>
+    <a href="/pokemon"><button class="new">Back</button></a>
 </body>
 </html>

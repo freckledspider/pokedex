@@ -1,3 +1,5 @@
+/* Index Styling */
+
 h1 {
     font-family: 'VT323', monospace;
     text-transform: uppercase;
@@ -96,4 +98,22 @@ body {
     height: 50%;
     text-align: center;
     padding-bottom: 20px;
+}
+
+/* Show page styling */
+
+.show {
+    background: linear-gradient(120deg, #86cdf1, #e4eff7);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #6686bd;
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+}
+
+.pokemonshow {
+    margin: 20px;
+    border: 20px solid white;
+    border-radius: 20px;
 }
