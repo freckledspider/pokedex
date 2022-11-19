@@ -100,7 +100,7 @@ body {
     padding-bottom: 20px;
 }
 
-/* Show page styling */
+/* Show, edit page styling */
 
 .show {
     background: linear-gradient(120deg, #86cdf1, #e4eff7);
@@ -116,4 +116,13 @@ body {
     margin: 20px;
     border: 20px solid white;
     border-radius: 20px;
+}
+
+input {
+    background-color: #fff;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    color: #6686bd;
+    border: none;
+    padding: 10px;
 }
