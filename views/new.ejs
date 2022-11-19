@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="catch">
+    <div class="catchpokemon">
     <h1>Catch a New Pokemon</h1>
     <% var randomPokemon = allPokemon[Math.floor(Math.random() * allPokemon.length)]; %>
-    <h2>You caught <%= randomPokemon.name %>!</h2>
-    <img src="<%= randomPokemon.img %>"><br>
+    <h3><img src="https://i.imgur.com/V24VT4k.png" style="height: 30px;"> You caught <%= randomPokemon.name %>! <img src="https://i.imgur.com/V24VT4k.png" style="height: 30px;"> </h3>
+    <img class="pokemoncatch" src="<%= randomPokemon.img %>"><br>
     Type: <%= randomPokemon.type %><br>
     HP: <%= randomPokemon.stats.hp %><br>
     ATK: <%= randomPokemon.stats.attack %><br>
-    DEF: <%= randomPokemon.stats.defense %><br>
+    DEF: <%= randomPokemon.stats.defense %><br><br>
 
     <form action="/pokemon" method="POST">
-    Give it a nickname? <input type="text" name="name" value="<%= randomPokemon.name %>"><br>
+    Give it a nickname? <input type="text" name="name" value="<%= randomPokemon.name %>"><br><br>
 
     <!-- Hidden preset stats -->
     <input class="hide" type="text" name="img" value="<%= randomPokemon.img %>"> 
@@ -27,8 +28,9 @@
     <input  class="hide"type="text" name="stats[defense]" value="<%= randomPokemon.stats.defense %>">
 
 
-    <input type="submit" value="Add to Team">
+    <input class="professor" type="submit" value="Add to Team">
     </form><br>
-    <a href="/pokemon/new"><button>Catch a different pokemon</button></a>
+    <a href="/pokemon/new"><button class="new">Catch a different pokemon</button></a>
+</div>
 </body>
 </html>

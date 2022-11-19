@@ -22,6 +22,17 @@ h2 {
     font-weight: normal;
 }
 
+h3 {
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 44px;
+    color: #d95856;
+    margin: 0px;
+    padding: 5px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
 .hide {
     display:none;
 }
@@ -125,4 +136,34 @@ input {
     color: #6686bd;
     border: none;
     padding: 10px;
+}
+
+/* Add new pokemon styling */
+
+.catch {
+    background: url("https://i.imgur.com/zr2glyI.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    color: #6686bd;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+}
+
+.catchpokemon {
+    background-color: rgb(228, 239, 247, 0.8);
+    margin-top: 20px;
+    padding: 20px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.pokemoncatch {
+    margin: 20px;
+    border: 20px solid white;
+    border-radius: 20px;
+    height: 200px;
 }
