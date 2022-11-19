@@ -9,10 +9,10 @@
 <body>
     <h1><%=pokemon.name; %></h1>
     <img src="<%=pokemon.img %>"><br>
-    <%=pokemon.type %><br>
-    <%=pokemon.stats.hp %><br>
-    <%=pokemon.stats.attack %><br>
-    <%=pokemon.stats.defense %><br>
+    Type: <%=pokemon.type %><br>
+    HP: <%=pokemon.stats.hp %><br>
+    ATK: <%=pokemon.stats.attack %><br>
+    DEF: <%=pokemon.stats.defense %><br>
     <a href="/pokemon/<%= index %>/edit"><button>Change Nickname</button></a>
     <a href="/pokemon"><button>Back</button></a>
 </body>

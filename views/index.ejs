@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <h1>Pokemon Team</h1>
+    <a href="/pokemon/new"><button>Catch a new pokemon</button></a><br><br>
     <% for(let i = 0; i < 6; i++) { %>
         <h2><%=allPokemon[i].name %></h2><br>
         <a href="/pokemon/<%= i %>"><img src="<%=allPokemon[i].img %>"></a><br>
+        <form action="/pokemon/<%= i %>?_method=DELETE" method="POST">
+            <input type="submit" value="Send to Professor">
+        </form>
     <% } %>
 
 

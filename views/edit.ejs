@@ -11,8 +11,7 @@
     <% pokemon.img; %>
     <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
         Nickname: <input type="text" name="name" value="<%= pokemon.name %>"> <br>
-        
-        <!-- Hidden values so they don't disappear with the update -->
+        <!-- Hidden values so they don't disappear with the name update -->
         <input class="hide" type="text" name="img" value="<%= pokemon.img %>">
         <input class="hide" type="text" name="type" value="<%= pokemon.type %>">
         <input class="hide" type="text" name="stats[hp]" value="<%=pokemon.stats.hp %>">

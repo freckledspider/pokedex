@@ -34,7 +34,7 @@ app.use('/public', express.static('public'));
 // Make /pokemon the index page
 app.get("/", (req, res) => res.redirect("/pokemon"))
 
-// Return all budget data
+// Return all pokemon data
 
 app.get('/pokemon/', (req, res) => {
     res.render(
@@ -44,6 +44,35 @@ app.get('/pokemon/', (req, res) => {
         }
     );
 });
+
+app.get('/pokemon/new', (req, res) => {
+    res.render(
+        'new.ejs',
+        {
+            allPokemon:pokemon
+        }
+    );
+});
+
+
+
+// -----------------------------------------------
+// New Route
+// -----------------------------------------------
+
+app.get("/pokemon/new", (req, res) => {
+    res.render("new.ejs")
+})
+
+// -----------------------------------------------
+// Create Route
+// -----------------------------------------------
+
+app.post("/pokemon", (req, res) => {
+    pokemon.unshift(req.body)
+    res.redirect("/pokemon")
+})
+
 
 // -----------------------------------------------
 // Show Route
@@ -58,15 +87,6 @@ app.get('/pokemon/:index', (req, res) => {
 
 
 // -----------------------------------------------
-// New Route
-// -----------------------------------------------
-
-app.get("/pokemon/new", (req, res) => {
-    res.render("new.ejs")
-})
-
-
-// -----------------------------------------------
 // Edit Route
 // -----------------------------------------------
 
@@ -75,16 +95,6 @@ app.get("/pokemon/:id/edit", (req, res) => {
         pokemon: pokemons[req.params.id],
         index: req.params.id,
     })
-})
-
-
-// -----------------------------------------------
-// Create Route
-// -----------------------------------------------
-
-app.post("/pokemon", (req, res) => {
-    pokemon.push(req.body)
-    res.redirect("/pokemon")
 })
 
 
