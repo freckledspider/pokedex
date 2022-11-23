@@ -1,5 +1,5 @@
 {
-  "name": "fruits-nodb",
+  "name": "pokedex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.generalassemb.ly:AlexMerced/fruits-app-nodb.git"
+    "url": "git@github.com:freckledspider/pokedex.git"
   },
   "keywords": [],
   "author": "",
